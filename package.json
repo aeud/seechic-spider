@@ -1,0 +1,14 @@
+{
+  "name": "seechic-robot",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "4.1.1",
+    "npm": "2.1.x"
+  },
+  "dependencies": {
+    "csv": "x",
+    "async": "x",
+    "request": "x"
+  }
+}
