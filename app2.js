@@ -6,11 +6,10 @@ var parseString = require('xml2js').parseString
 
 request.get('http://sg.seechic.com/sitemap.xml', function(err, resp, body){
     parseString(body, function (err, res) {
-        console.log(res.urlset.url)
+        console.log('Crawling ' + res.urlset.url.length ' pages...')
         async.parallel(res.urlset.url.map(row => {
             return (callback) => {
                 var url = row.loc[0]
-                console.log(url)
                 var startTime = new Date().getTime()
                 request.get(url, (err, resp, body) => {
                     console.log([url, '' + (new Date().getTime() - startTime) + ' ms'])
