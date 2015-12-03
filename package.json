@@ -9,6 +9,7 @@
   "dependencies": {
     "csv": "x",
     "async": "x",
-    "request": "x"
+    "request": "x",
+    "xml2js": "x"
   }
 }
